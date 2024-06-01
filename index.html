@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <head>Charctic</head>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div>
+      <canvas id="myChart"></canvas>
+    </div>
+
+    <script>
+      const ctx = document.getElementById('myChart');
+
+      const dataset = [{
+        "hostname": "my-host",
+        "timestamp": 1717170266329,
+        "cpu_usage": 1.2,
+        "mem_total": 33561030656,
+        "mem_free": 2685464576
+      }
+      ,{
+        "hostname": "my-host",
+        "timestamp": 1717170383873,
+        "cpu_usage": 1.5,
+        "mem_total": 33561030656,
+        "mem_free": 2650021888
+      }
+      ,{
+        "hostname": "my-host",
+        "timestamp": 1717170491950,
+        "cpu_usage": 1.7,
+        "mem_total": 33561030656,
+        "mem_free": 2198245376
+      }
+      ];
+
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          datasets: [{
+            data: [{x: 10, y: 20}, {x: 15, y: null}, {x: 20, y: 10}]
+          }]
+        },
+      });
+
+      // new Chart(ctx, {
+      //   type: 'line',
+      //   data: {
+      //     labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+      //     datasets: [{
+      //       label: '# of Votes',
+      //       data: [12, 19, 3, 5, 2, 3],
+      //       borderWidth: 1
+      //     }]
+      //   },
+      //   options: {
+      //     scales: {
+      //       y: {
+      //         beginAtZero: true
+      //       }
+      //     }
+      //   }
+      // });
+    </script>
+</body>
+</html>

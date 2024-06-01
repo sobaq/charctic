@@ -1,0 +1,16 @@
+[package]
+name = "charctic"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0.86"
+axum = "0.7.5"
+rusqlite = "0.31.0"
+tokio = { version = "1.38.0", features = ["rt-multi-thread", "sync"] }
+tokio-rusqlite = "0.5.1"
+
+[profile.release]
+opt-level = "z"
+codegen-units = 1
+strip = true
